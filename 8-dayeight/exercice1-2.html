@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="date"></div>
+    <p>Exercise 1: Dans un fichier HTML, faire un tableau nommé tab de 5 entiers. Dans ce fichier il y aura toutes les balises et instructions pour valider et interpréter les questions suivantes.<br>
+
+        
+        #Question 1.4 Faire une boucle qui calcule la somme de la valeur ascii de votre prénom
+        Afficher la somme<br>
+        #Question 1.5 A partir de la somme précédente <br>
+        Faire une boucle qui va afficher les lettres de votre prénom à hauteur de 80% de la somme précédemment trouvé <br>
+        #Question 1.6<br>
+        Faire une boucle qui affiche votre prénom de droite à gauche. Ne pas utiliser reverse<br>
+    </p>
+    <div id="resultat"></div>
+    <button type="button" name="affiche-resultat" onclick=affichePrenom()>Prenom</button>
+
+    <button type="button" name="affiche-resultat" onclick=affichePrenomPartial()>Prenom 80</button>
+
+    <button type="button" name="affiche-resultat" onclick=affichePrenomReverse()>reverse</button>
+    
+
+<!-- 642 -->
+    <script>
+        
+
+        // 1.4
+        function affichePrenom() {
+            var prenom = prompt('quel est votre prénom !');
+
+            var somme = 0
+            for(let i=0; i<prenom.length; i++) {
+                somme += prenom[i].charCodeAt();
+            }
+            document.querySelector('#resultat').innerHTML = "somme ["+prenom+"] = " + somme;
+        }
+
+        // 1.5
+        function affichePrenomPartial() {
+            var prenom = prompt('quel est votre prénom !');
+
+            var somme = 0
+            var is_running = true;
+            var i = 0;
+            var short_prenom = ""
+            while(is_running) {
+                
+                somme += prenom[i].charCodeAt();
+                if (somme > (80/100*642) ) {
+                    is_running = false;
+                    short_prenom = prenom.slice(0,i);
+                    break
+                }
+                i++
+            }
+            
+            document.querySelector('#resultat').innerHTML = "somme a 642 ["+short_prenom+"]";
+        }
+
+        // 1.6
+        function affichePrenomReverse() {
+            var prenom = prompt('quel est votre prénom !');
+
+            var reverse =""
+            for(let i=prenom.length-1; i>=0; i--) {
+                reverse += prenom[i];
+            }
+            document.querySelector('#resultat').innerHTML = "reverse ["+prenom+"] = " + reverse;
+        }
+
+
+        // let btnSum = document.getElementById('btnSum');
+        // let btnSub = document.getElementById('btnSub');
+        // let btnMult = document.getElementById('btnMult');
+        // let btnDiv = document.getElementById('btnDiv');
+        // let btnModulo = document.getElementById('btnModulo');
+
+        // function sum(){
+            
+        //     var val1 = document.querySelector('#val1').value;
+        //     var val2 = document.querySelector('#val2').value;
+        //     if (isNaN(val1) || isNaN(val2)){
+        //         alert("vous devez saisir des nombres !");
+        //         document.querySelector('#val1').value = document.querySelector('#val2').value = "";
+        //         return null;
+        //     }
+
+        //     var result = parseInt(val1) + parseInt(val2);
+        //     var stringResult = "Le résultat de l'addition " + val1 + " + "+val2+" est <b>"+result+"</b>";
+        //     var blocResult = document.querySelector('#resultat').innerHTML = stringResult;         
+        // }
+
+        // function sub(){
+            
+        //     var val1 = document.querySelector('#val1').value;
+        //     var val2 = document.querySelector('#val2').value;
+        //     if (isNaN(val1) || isNaN(val2)){
+        //         alert("vous devez saisir des nombres !");
+        //         document.querySelector('#val1').value = document.querySelector('#val2').value = "";
+        //         return null;
+        //     }
+
+        //     var result = parseInt(val1) - parseInt(val2);
+        //     var stringResult = "Le résultat de la soustraction " + val1 + " - "+val2+" est <b>"+result+"</b>";
+        //     var blocResult = document.querySelector('#resultat').innerHTML = stringResult; 
+        // }
+
+        // function mult(){
+            
+        //     var val1 = document.querySelector('#val1').value;
+        //     var val2 = document.querySelector('#val2').value;
+        //     if (isNaN(val1) || isNaN(val2)){
+        //         alert("vous devez saisir des nombres !");
+        //         document.querySelector('#val1').value = document.querySelector('#val2').value = "";
+        //         return null;
+        //     }
+
+        //     var result = parseInt(val1) * parseInt(val2);
+        //     var stringResult = "Le résultat de la multiplication " + val1 + " * "+val2+" est <b>"+result+"</b>";
+        //     var blocResult = document.querySelector('#resultat').innerHTML = stringResult; 
+        // }
+
+        // function div(){
+            
+        //     var val1 = document.querySelector('#val1').value;
+        //     var val2 = document.querySelector('#val2').value;
+        //     if (isNaN(val1) || isNaN(val2)){
+        //         alert("vous devez saisir des nombres !");
+        //         document.querySelector('#val1').value = document.querySelector('#val2').value = "";
+        //         return null;
+        //     }
+
+        //     var result = parseInt(val1) / parseInt(val2);
+        //     var stringResult = "Le résultat de la division " + val1 + " / "+val2+" est <b>"+result+"</b>";
+        //     var blocResult = document.querySelector('#resultat').innerHTML = stringResult; 
+        // }
+
+        // function modulo(){
+            
+        //     var val1 = document.querySelector('#val1').value;
+        //     var val2 = document.querySelector('#val2').value;
+        //     if (isNaN(val1) || isNaN(val2)){
+        //         alert("vous devez saisir des nombres !");
+        //         document.querySelector('#val1').value = document.querySelector('#val2').value = "";
+        //         return null;
+        //     }
+
+        //     var result = parseInt(val1) % parseInt(val2);
+        //     var stringResult = "Le reste de la division " + val1 + " / "+val2+" est <b>"+result+"</b>";
+        //     var blocResult = document.querySelector('#resultat').innerHTML = stringResult; 
+        // }
+
+
+        // btnSum.addEventListener('click',sum, false);
+        // btnSub.addEventListener('click',sub, false);
+        // btnMult.addEventListener('click',mult, false);
+        // btnDiv.addEventListener('click',div, false);
+        // btnModulo.addEventListener('click',modulo, false);
+        // var date = new Date();
+        // var dateHours = date.getDay() + "/" + (date.getMonth()+1) + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes();
+        // console.log(dateHours)
+        // var blocDate = document.querySelector('#date').innerHTML = dateHours;
+        
+    </script>
+    <i class="fas fa-address-card"></i>
+    
+</body>
+</html>

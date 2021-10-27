@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <title>La ferme</title>
+    <style>
+        * {
+            border: 1px solid red;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            width:85%;
+            margin:0 auto;
+            font-size:1rem;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:#eee;
+            color:#444;
+        }
+        main {
+            background-color: #fff;
+            box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, .1);
+            padding:0.5rem;
+        }
+        img {
+            max-width:100%;
+            height:auto;
+        }
+        header, footer {
+            background-image: url('images/bg_repeat.png');
+            padding:0.5rem; 
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+        header a, footer a {
+            color:#333;
+            text-decoration:none;
+            transition-property: color;
+            transition-duration: 0.25s;
+            transition-delay: 0s;
+        }
+        header a:hover, footer a:hover {
+            color:rgb(230, 171, 10);
+            text-decoration:underline;
+        }
+
+        footer {
+            height: 150px;
+        }
+        
+        /* PHOTO */
+        .photo {
+            display: flex;
+            
+        }
+        .grid_container {
+            /* margin:1rem auto; */
+            width:70%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            
+        }
+        .grid_item1 {
+            grid-column: 1 / 4  ;
+            grid-row: 1 / 4 ;
+        }
+        .grid_item2 {
+            grid-column: 4  ;
+            grid-row: 1 ;
+        }
+        .grid_item3 {
+            grid-column: 4  ;
+            grid-row: 2;
+        }
+        .grid_item4 {
+            grid-column: 4  ;
+            grid-row: 3 ;
+        }
+        .grid_item5 {
+            grid-column: 1  ;
+            grid-row: 4 ;
+        }
+        .grid_item6 {
+            grid-column: 2  ;
+            grid-row: 4 ;
+        }
+        .grid_item7 {
+            grid-column: 3  ;
+            grid-row: 4 ;
+        }
+        .grid_item8 {
+            grid-column: 4  ;
+            grid-row: 4 ;
+        }
+        .text_container {
+            width:30%;
+            box-sizing: border-box;
+            padding-left:1rem;
+            /* margin-top:1rem; */
+        }
+        .separator {
+            text-align: center;
+            line-height:0.2rem;
+        }
+        .separator:before, .separator:after {
+            content:"———";
+            font-weight: 900;
+        }
+        h1, h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            margin: 0.2rem 0;
+        }
+        p {
+            margin-top:0.4rem;
+            text-align: justify;
+        }
+        .text_container h1 {
+            font-size:1.4rem;
+        }
+        .text_container h2 {
+            font-size:1.2rem;
+        }
+        .text {
+            display:flex;
+            padding-top:1rem;
+            
+        }
+        .text h1 {
+            font-size:1.1rem;
+        }
+        .text h2 {
+            font-size:0.9rem;
+        }
+
+        .text p {
+            font-style: italic;
+            line-height: 0.9rem;
+        }
+        .text .text_item {
+            box-sizing: border-box;
+            padding-right: 1rem;
+        }
+        .text .text_item:last-child {
+            padding-right: 0;
+        }
+        .back_to_top {
+            background-color:rgb(14, 152, 187);
+            color:#fff;
+            display:flex;
+            width:2rem;
+            height:2rem;
+            border-radius:50%;
+            justify-content:center;
+            align-items:center;
+            position:relative;
+            right:1rem;
+            bottom:-3rem;
+            transform: rotate(-90deg);
+            font-weight: 700;
+        }
+        .back_to_top a {
+            color:#fff;
+        }
+        .back_to_top a:hover {
+            color:#fff;
+            text-decoration:none;
+        }
+        @media screen and (min-width:468px) and (max-width:992px) {
+            .photo {
+                display: bloc;
+                flex-wrap: wrap;
+            }            
+            .grid_container, .text_container {
+                flex:100%;
+            }
+            
+            .text {
+                flex-wrap: wrap;
+                
+            }
+            .text .text_item {
+                width:50%;
+                padding-right: 0.5rem;
+            }
+            .text_container {
+                padding-left:0;
+            }
+            .no-padding-right {
+                padding-right: 0rem !important;
+            }
+
+        }
+        @media screen and (max-width:468px) {
+            .photo {
+                display: bloc;
+                flex-wrap: wrap;
+            }
+            .grid_container, .text_container {
+                flex:100%;
+            }
+            .grid_container, .text_container {
+                padding-left: 0rem;
+            }
+
+            .text  {
+                flex-direction: column;
+            }
+            .text .text_item {
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="top">
+        <div>
+            <a href="" title="" class="">Menu1</a> 
+            <a href="" title="" class="">menu2</a> 
+        </div>
+        <div><img src="images/logo.png" width="60px" height="24px" alt="la ferme"></div>
+        <div>
+            <a href="" title="" class="">Menu 3</a> 
+            <a href="" title="" class="">menu4</a>
+        </div>
+    </header>
+    <main>
+        <section class='photo'>
+            <div class='grid_container'>
+                <div class='grid_item1'><img src="images/ails.jpeg" alt="description"></div>
+                <div class='grid_item2'><img src="images/brocolli.jpeg" alt="description"></div>
+                <div class='grid_item3'><img src="images/carottes-des-sables.jpeg" alt="description"></div>
+                <div class='grid_item4'><img src="images/choux-rouge.jpeg" alt="description"></div>
+                <div class='grid_item5'><img src="images/fraises.jpeg" alt="description"></div>
+                <div class='grid_item6'><img src="images/oignons-rouges.jpeg" alt="description"></div>
+                <div class='grid_item7'><img src="images/piments-rouges.jpeg" alt="description"></div>
+                <div class='grid_item8'><img src="images/poivrons.jpeg" alt="description"></div>
+            </div>
+            <div class='text_container'>
+                <h1>title en Roboto 700 1.4rem</h1>
+                <h2>subtitle en Roboto 700 1.2rem</h2>
+                <p>en arial 1rem Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quas beatae officiis libero, eveniet id laborum ipsa voluptatem totam delectus nemo hic repudiandae facilis magnam molestias assumenda neque iste architecto.</p>
+                <div class="separator">&nbsp;&nbsp;</div>
+                <p>Ducimus ea minima sapiente nihil unde quis voluptatum nulla! Quam consequuntur eum vitae ullam commodi quod? Corrupti molestias praesentium dolore non perspiciatis distinctio necessitatibus commodi tenetur officiis deserunt, corporis quo!</p>
+                <div class="separator">&nbsp;&nbsp;</div>
+                <p>Blanditiis, exercitationem odit! Veniam blanditiis atque facilis! Quod ratione soluta iusto quis explicabo, rem odio perspiciatis incidunt amet fugiat minima animi nisi natus, qui temporibus. Itaque, qui molestias! Excepturi, quisquam.</p>
+            </div>
+        </section>
+        <section class='text'>
+            <div class="text_item">
+                <h1>title en Roboto 700 1.1rem</h1>
+                <h2>subtitle en Roboto 700 0.9rem</h2>
+                <p>italic 0.7rem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto cumque atque ea vero magni consequatur aliquid nam iure rem officia id quis inventore illum soluta repellendus dicta accusantium, fugiat et.</p>
+            </div>
+            <div class="text_item no-padding-right">
+                <h1>title en Roboto 700 1.1rem</h1>
+                <h2>subtitle en Roboto 700 0.9rem</h2>
+                <p>italic 0.7rem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto cumque atque ea vero magni consequatur
+                    aliquid nam iure rem officia id quis inventore illum soluta repellendus dicta accusantium, fugiat et.</p>
+            </div>
+            <div class="text_item">
+                <h1>title en Roboto 700 1.1rem</h1>
+                <h2>subtitle en Roboto 700 0.9rem</h2>
+                <p>italic 0.7rem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto cumque atque ea vero magni consequatur
+                    aliquid nam iure rem officia id quis inventore illum soluta repellendus dicta accusantium, fugiat et.</p>
+            </div>
+            <div class="text_item">
+                <h1>title en Roboto 700 1.1rem</h1>
+                <h2>subtitle en Roboto 700 0.9rem</h2>
+                <p>italic 0.7rem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto cumque atque ea vero magni consequatur
+                    aliquid nam iure rem officia id quis inventore illum soluta repellendus dicta accusantium, fugiat et.</p>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div>
+            <img src="images/logo.png" width="60px" height="24px" alt="la ferme"><br>
+            Adresse<br>
+            37100 Ballan
+        </div>
+        <div>
+            <a href="" title="" class="">Menu1</a><br>
+            <a href="" title="" class="">menu2</a>
+        </div>
+        <div>
+            <a href="" title="" class="">Menu1</a><br>
+            <a href="" title="" class="">menu2</a>
+        </div>
+        <div class="back_to_top"><a href="#top" title="go to top">></a></div>
+    </footer>
+    
+    
+</body>
+</html>

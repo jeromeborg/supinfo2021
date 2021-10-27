@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .parent p {
+            color:red;
+        }
+        .parent > p { 
+            color:blue;
+        } 
+         .parent2 h1 ~ p {
+            color:orange;
+        }
+        .parent2 h1 + p {
+            color:green;
+        }
+        
+        .grandchild {
+            font-size:16px;
+        }
+        .grandchild:first-child {
+            font-size:12px;
+        }
+        .grandchild:last-child {
+            font-size:20px;
+        } 
+        
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <p class="child">
+            Enfant
+            <div>
+                <p class="grandchild">Petit enfant</p>
+                <p class="grandchild">Petit enfant</p>
+                <p class="grandchild">Petit enfant</p>
+                <p class="grandchild">Petit enfant</p>
+            </div>
+        </p>
+        
+        
+    </div>
+    <div class="parent2">
+        <h1>heading</h1>
+        <p>paragraph</p>
+        <p>paragraph</p>
+    </div>
+    
+</body>
+</html>

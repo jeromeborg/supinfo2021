@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p>Exercice 1.9 : Dans une page HTML, un bouton permet de lancer une fonction JavaScript qui demande des valeurs et qui retourne le périmètre du cercle et la surface du cercle et la surface d’un carré.</p>
+    <button id="btnPerimetreCercle" >Périmétre cercle</button> <span id="perimetreCercle"></span><br>
+    <button id="btnSurfaceCercle" >Surface cercle</button> <span id="surfaceCercle"></span><br>
+    <button id="btnSurfaceCarre" >Surface carré</button> <span id="surfaceCarre"></span><br>
+
+    <script>
+        let btnPerimetreCercle = document.getElementById('btnPerimetreCercle');
+        let btnSurfaceCercle = document.getElementById('btnSurfaceCercle');
+        let btnSurfaceCarre = document.getElementById('btnSurfaceCarre');
+
+        function perimetreCercle(e){
+            e.preventDefault();
+            var diametre = prompt('Diametre du cercle');
+
+            var result = 2 * 3.14 * parseInt(diametre)/2;
+
+            var affiche = document.getElementById('perimetreCercle');
+            console.log(affiche);
+            affiche.innerHTML = "rayon : " + (parseInt(diametre)/2) + " perimetre : " + result;
+
+        }
+
+        function surfaceCercle(e){
+            e.preventDefault();
+
+            var diametre = prompt('Diametre du cercle');
+
+
+            var result = 3.14 * parseInt(diametre)/2 * parseInt(diametre)/2;
+
+            var affiche = document.getElementById('surfaceCercle');
+            console.log(affiche);
+            affiche.innerHTML = "rayon : " + (parseInt(diametre)/2) + " surface : " + result;
+
+        }
+
+        function surfaceCarre(e){
+            e.preventDefault();
+
+            var largeur = prompt('Largeur du carre');
+
+
+            var result = parseInt(largeur)*parseInt(largeur);
+
+            var affiche = document.getElementById('surfaceCarre');
+            console.log(affiche);
+            affiche.innerHTML = "largeur : " + (largeur) + " surface : " + result;
+
+        }
+        btnPerimetreCercle.addEventListener('click',perimetreCercle, false);
+        btnPerimetreCercle.addEventListener('click', () => { console.log('perimetre cercle '); }, false);
+        btnSurfaceCercle.addEventListener('click',surfaceCercle, false);
+        btnSurfaceCarre.addEventListener('click',surfaceCarre, false);
+        
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="date"></div>
+    <p>Exercise 1: Dans un fichier HTML, faire un tableau nommé tab de 5 entiers. Dans ce fichier il y aura toutes les balises et instructions pour valider et interpréter les questions suivantes.<br>
+
+        #Question 1.1: Faire une fonction qui additionne tous les entiers du tableau.<br>
+        #Question 1.2: Faire une fonction avec un argument a qui retourne le résultat de l'addition de la position a à la dernière position du tableau.<br>
+        #Question 1.3: : Faire une fonction qui affiche, après un clic sur un bouton de la page HTML, les résultats des additions.<br>
+        
+    </p>
+    <div id="resultat"></div>
+    <button type="button" name="affiche-resultat" onclick=afficheResulat()>Affiche les resultats</button>
+    
+
+
+    <script>
+        // 1.1
+        var array = [1,2,3,4,5];
+
+        function sumArray(tableau) {
+            var somme = 0;
+            for (let i = 0; i < tableau.length; i++) {
+                somme += tableau[i];
+            }
+            console.log('somme', somme)
+            return somme;
+        }
+
+        sumArray(array);
+
+        // 1.2
+        var array = [1,2,3,4,5];
+
+        function sumArrayIndex(tableau) {
+            var limit = prompt('donnez moi un index');
+            var somme = 0;
+            for (let i = limit; i < tableau.length; i++) {
+                somme += tableau[i];
+            }
+            console.log('somme', somme)
+            return somme;
+        }
+
+        sumArrayIndex(array);
+
+        // 1.3
+        function afficheResulat() {
+            document.querySelector('#resultat').innerHTML = sumArray(array)
+        }
+
+        
+        
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display:flex;
+            flex-wrap: wrap;
+        }
+        .monbloc {
+            box-sizing: border-box;
+            padding:10px;
+            flex:33%;
+        }
+        .primary {
+            background-color: #f00;
+        }
+        .secondary {
+            background-color: #0f0;
+        }
+        @media screen and (max-width:900px) {
+            .monbloc {
+                flex:50%;
+            }
+            
+        }
+        @media screen and (max-width:600px) {
+            .container {
+                flex-direction: column;
+                
+            }
+            /* .monbloc {
+                flex:100%;
+                
+            } */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="monbloc primary">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab est iusto veniam. Aliquam beatae iure officia exercitationem reiciendis accusamus enim nobis unde, eaque optio voluptate ut similique fugit, quae natus. </div>
+        <div class="monbloc secondary">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab est iusto veniam. Aliquam beatae iure officia exercitationem reiciendis accusamus enim nobis unde, eaque optio voluptate ut similique fugit, quae natus.</div>
+        <div class="monbloc primary">3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab est iusto veniam. Aliquam beatae iure officia exercitationem reiciendis accusamus enim nobis unde, eaque optio voluptate ut similique fugit, quae natus.</div>
+        <div class="monbloc secondary">4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab est iusto veniam. Aliquam beatae iure officia exercitationem reiciendis accusamus enim nobis unde, eaque optio voluptate ut similique fugit, quae natus.</div>
+        <div class="monbloc primary">5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab est iusto veniam. Aliquam beatae iure officia exercitationem reiciendis accusamus enim nobis unde, eaque optio voluptate ut similique fugit, quae natus.</div>
+        <div class="monbloc secondary">6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab est iusto veniam. Aliquam beatae iure officia exercitationem reiciendis accusamus enim nobis unde, eaque optio voluptate ut similique fugit, quae natus.</div>
+    </div>    
+</body>
+</html>

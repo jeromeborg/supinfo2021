@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p>EExercice 1.12 : Écrivez des programmes JavaScript qui utilisent des fonctions fléchées, par exemple :
+
+        #Question 1.12.1 : Le programme 1 demande une valeur à un utilisateur et utilise une fonction fléchée avec un paramètre. La fonction effectue un calcul comme résultat.
+        #Question 1.12.2 : Le programme 2 demande 2 valeurs à un utilisateur et utilise une fonction fléchée avec 2 paramètres. La fonction effectue un calcul comme résultat.
+        #Question 1.12.3 : Le programme 3 demande 1 valeur à un utilisateur et utilise une fonction fléchée avec 0 paramètres. La fonction effectue un calcul comme résultat.</p>
+    <button id="btnUnParam" >Un parametre</button> <span id="1param"></span><br>
+    <button id="btnDeuxParam" >deux parametres</button> <span id="2param"></span><br>
+    <button id="btnTroisParam" >trois parametres</button> <span id="3param"></span><br>
+
+    <script>
+        let btnUnParam = document.getElementById('btnUnParam');
+        let btnDeuxParam = document.getElementById('btnDeuxParam');
+        let btnTroisParam = document.getElementById('btnTroisParam');
+
+        function unParam(){
+            var diametre = prompt('Diametre du cercle');
+
+            const calcul = (diametre) => {
+                alert(diametre);
+                return diametre;
+            }
+
+            console.log(calcul(diametre));
+        }
+
+        function deuxParam(){
+            var largeur = prompt('Largeur');
+            var longueur = prompt('Longueur');
+
+            const calcul = (largeur, longueur) => {
+                
+                return parseInt(largeur)*parseInt(longueur);
+            }
+            console.log(calcul(largeur, longueur));
+        }
+
+
+        function troisParam(){
+            var largeur = prompt('Largeur');
+            var longueur = prompt('Longueur');
+            var hauteur = prompt('Hauteur');
+
+            const calcul = (largeur, longueur, hauteur) => {
+                
+                return parseInt(largeur)*parseInt(longueur)*parseInt(hauteur);
+            }
+            console.log(calcul(largeur, longueur, hauteur));
+        }
+
+        btnUnParam.addEventListener('click',unParam, false);
+        btnDeuxParam.addEventListener('click',deuxParam, false);
+        btnTroisParam.addEventListener('click',troisParam, false);
+        
+        
+    </script>
+    
+</body>
+</html>

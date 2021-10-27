@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid {
+            width:600px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        .hide {
+            display:none;
+        }
+    </style>
+    
+</head>
+<body>
+    <p>Exercice 2.1 : Reprendre le premier site de la journée 4. Ajouter une fonction Javascript permettant de faire disparaitre des photos lorsqu'on clique dessus . Par exemple</p>
+    <div class="grid">
+        <div class="grid_item"><img src="https://via.placeholder.com/200x/0000FF/808080?text=1*1" alt=""></div>
+        <div class="grid_item"><img src="https://via.placeholder.com/200x/00FF00/808080?text=1*2" alt=""></div>
+        <div class="grid_item"><img src="https://via.placeholder.com/200x/FF0000/808080?text=1*3" alt=""></div>
+        <div class="grid_item"><img src="https://via.placeholder.com/200x/FFFF00/808080?text=2*1" alt=""></div>
+        <div class="grid_item"><img src="https://via.placeholder.com/200x/00FFFF/808080?text=2*2" alt=""></div>
+        <div class="grid_item"><img src="https://via.placeholder.com/200x/cccccc/808080?text=2*3" alt=""></div>
+        <div class="grid_item"><img src="https://via.placeholder.com/200x/FF0000/808080?text=3*1" alt=""></div>
+        <div class="grid_item"><img src="https://via.placeholder.com/200x/00FF00/808080?text=3*2" alt=""></div>
+        <div class="grid_item"><img src="https://via.placeholder.com/200x/0000FF/808080?text=3*3" alt=""></div>
+    </div>
+
+
+
+    <script>
+        let imgs = document.querySelectorAll('img');
+
+        function hide(current) {
+            current.classList.toggle('hide');
+        } 
+
+        for (let i=0; i<imgs.length; i++) {
+            imgs[i].addEventListener('click',() => { hide(imgs[i]) }, false);
+        }
+
+
+        
+        
+        
+    </script>
+    
+    
+</body>
+</html>

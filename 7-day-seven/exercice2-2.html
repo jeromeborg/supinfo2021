@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="date"></div>
+    <p>Exercice 2.2 : Créer dans la page Web de votre site une zone permettant d’effectuer des calculs (SUM, SUB, MULT, DIV, MODULO). Par exemple :</p>
+    
+    <div style="display: flex; margin-bottom:2rem">
+        <div style="display: flex;">
+            <form>
+            <input type="text" id="val1" value=""/>
+            <input type="text" id="val2" value=""/>
+            </form>
+        </div>
+        <div id="resultat" style="padding-left:1rem">.</div>
+    </div>
+    <div>
+        <button id="btnSum">SUM</button>
+        <button id="btnSub">SUB</button>
+        <button id="btnMult">MULT</button>
+        <button id="btnDiv">DIV</button>
+        <button id="btnModulo">MODULO</button>
+    </div>
+
+
+    <script>
+        let btnSum = document.getElementById('btnSum');
+        let btnSub = document.getElementById('btnSub');
+        let btnMult = document.getElementById('btnMult');
+        let btnDiv = document.getElementById('btnDiv');
+        let btnModulo = document.getElementById('btnModulo');
+
+        function sum(){
+            
+            var val1 = document.querySelector('#val1').value;
+            var val2 = document.querySelector('#val2').value;
+            if (isNaN(val1) || isNaN(val2)){
+                alert("vous devez saisir des nombres !");
+                document.querySelector('#val1').value = document.querySelector('#val2').value = "";
+                return null;
+            }
+
+            var result = parseInt(val1) + parseInt(val2);
+            var stringResult = "Le résultat de l'addition " + val1 + " + "+val2+" est <b>"+result+"</b>";
+            var blocResult = document.querySelector('#resultat').innerHTML = stringResult;         
+        }
+
+        function sub(){
+            
+            var val1 = document.querySelector('#val1').value;
+            var val2 = document.querySelector('#val2').value;
+            if (isNaN(val1) || isNaN(val2)){
+                alert("vous devez saisir des nombres !");
+                document.querySelector('#val1').value = document.querySelector('#val2').value = "";
+                return null;
+            }
+
+            var result = parseInt(val1) - parseInt(val2);
+            var stringResult = "Le résultat de la soustraction " + val1 + " - "+val2+" est <b>"+result+"</b>";
+            var blocResult = document.querySelector('#resultat').innerHTML = stringResult; 
+        }
+
+        function mult(){
+            
+            var val1 = document.querySelector('#val1').value;
+            var val2 = document.querySelector('#val2').value;
+            if (isNaN(val1) || isNaN(val2)){
+                alert("vous devez saisir des nombres !");
+                document.querySelector('#val1').value = document.querySelector('#val2').value = "";
+                return null;
+            }
+
+            var result = parseInt(val1) * parseInt(val2);
+            var stringResult = "Le résultat de la multiplication " + val1 + " * "+val2+" est <b>"+result+"</b>";
+            var blocResult = document.querySelector('#resultat').innerHTML = stringResult; 
+        }
+
+        function div(){
+            
+            var val1 = document.querySelector('#val1').value;
+            var val2 = document.querySelector('#val2').value;
+            if (isNaN(val1) || isNaN(val2)){
+                alert("vous devez saisir des nombres !");
+                document.querySelector('#val1').value = document.querySelector('#val2').value = "";
+                return null;
+            }
+
+            var result = parseInt(val1) / parseInt(val2);
+            var stringResult = "Le résultat de la division " + val1 + " / "+val2+" est <b>"+result+"</b>";
+            var blocResult = document.querySelector('#resultat').innerHTML = stringResult; 
+        }
+
+        function modulo(){
+            
+            var val1 = document.querySelector('#val1').value;
+            var val2 = document.querySelector('#val2').value;
+            if (isNaN(val1) || isNaN(val2)){
+                alert("vous devez saisir des nombres !");
+                document.querySelector('#val1').value = document.querySelector('#val2').value = "";
+                return null;
+            }
+
+            var result = parseInt(val1) % parseInt(val2);
+            var stringResult = "Le reste de la division " + val1 + " / "+val2+" est <b>"+result+"</b>";
+            var blocResult = document.querySelector('#resultat').innerHTML = stringResult; 
+        }
+
+
+        btnSum.addEventListener('click',sum, false);
+        btnSub.addEventListener('click',sub, false);
+        btnMult.addEventListener('click',mult, false);
+        btnDiv.addEventListener('click',div, false);
+        btnModulo.addEventListener('click',modulo, false);
+        var date = new Date();
+        var dateHours = date.getDay() + "/" + (date.getMonth()+1) + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes();
+        console.log(dateHours)
+        var blocDate = document.querySelector('#date').innerHTML = dateHours;
+        
+    </script>
+    <i class="fas fa-address-card"></i>
+    
+</body>
+</html>

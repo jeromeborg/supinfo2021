@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function carre(number) {
+        return number * number;
+    }
+
+    var resultat2 = function(otherNumber) {
+        return otherNumber + otherNumber;
+    }
+
+    var resultat3 = (otherNumberEncore) => {
+        return otherNumberEncore + otherNumberEncore;
+    }
+
+    var unNombre = 5;
+    var resultat = carre(unNombre);
+    console.log('resultat', resultat);
+
+    var unAutreNombre = 2;
+    var resultat = resultat2(unAutreNombre);
+    console.log('resultat2', resultat);
+
+    var unAutreNombreEncore = 4;
+    var resultat = resultat3(unAutreNombreEncore);
+    console.log('resultat3', resultat);
+    
+</script>
+<body>
+
+    <!--
+        function carre(number) {
+        return number*number;
+    }
+
+    let result2 = function(number1, number2) {
+        return number1*number2;
+    }
+
+    let result3 = (number1, number2) => {
+        return number1*number2;
+    }
+
+    var unNombre = 5;
+    var result = carre(unNombre);
+    alert('result:'+result);
+
+    var unAutreNombre = 3;
+    alert('result2:'+result2(unNombre, unAutreNombre));
+
+    var encoreUnAutreNombre = 12;
+    alert('result2 fléché:'+result2(unAutreNombre, encoreUnAutreNombre));
+
+    -->
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p>Exercice 1.9 : Dans une page HTML, un bouton permet de lancer une fonction JavaScript qui demande des valeurs et qui retourne le périmètre du cercle et la surface du cercle et la surface d’un carré.</p>
+    
+
+    <script>
+        function message() {
+            var a = prompt();
+            var b = prompt();
+            a = parseInt(a);
+            b = parseInt(b);
+            console.log('a:' + a + ' b:' + b);
+            var c = a++ + b++;
+            console.log('a++ + b++:' + c);
+            console.log('a:' + a + ' b:' + b);
+            var d = ++a + b++;
+            console.log('++a + b++:' + d);
+            console.log('a:' + a + ' b:'+b);
+            
+        }
+        message();
+        
+    </script>
+    
+</body>
+</html>

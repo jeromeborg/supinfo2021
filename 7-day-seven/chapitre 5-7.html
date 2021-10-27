@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="bloc"><a href="#">Some text</a></div>
+
+    <script>
+        const BLOC = document.querySelector('.bloc a');
+        
+
+        function change(e, current){
+            e.preventDefault();
+            
+
+            current.innerHTML == 'Some text' ? BLOC.innerHTML = 'Other text' : BLOC.innerHTML = 'Some text';
+
+        }
+        BLOC.addEventListener('click', function(e) { change(e, this);}, false);
+        
+        
+    </script>
+    
+</body>
+</html>

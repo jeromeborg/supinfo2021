@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 1em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+            background-color: white;
+            color:#111;
+        }
+
+        header{
+            background-image: url('images/bg_repeat.png');
+            height:10em;
+            
+            display:flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        
+        .bg_noir {
+            background-color:rgb(0,0,0);
+        }
+        .bg_vert {
+            background-color:rgb(157, 214, 23);
+        }
+        .bg_gris {
+            background-color:#666;
+        }
+        .bg_orange {
+            background-color:rgb(221, 105, 37);
+        }
+        .no-pt {
+            padding-top: 0;
+        }
+        .p-1 {
+            padding :1rem;
+        }
+        .pl-1 {
+            padding-left:1rem;
+        }
+        .pt-1 {
+            padding-top:1rem;
+        }
+        .pb-3 {
+            padding-bottom:3rem;
+        }
+        .pb-1 {
+            padding-bottom:1rem;
+        }
+        .ml-1 {
+            margin-left:1rem;
+        }
+        .mr-1 {
+            margin-right:1rem;
+        }
+        .mt-2 {
+            margin-top:2rem;
+        }
+        .w-1OO {
+            width: 100%;
+        }
+        .w-5O {
+            width: 50%;
+        }
+        nav {
+            padding:0.2rem 0.4rem 0.2rem 0.4rem;
+            text-align: center;
+        }
+        a.link-blanc {
+            color: #fff;
+        }
+        a.link-blanc:hover {
+            color: #666;
+        }
+        .introduction {
+            font-size: 1.1em;
+            font-weight: 500;
+            text-align: center;
+        }
+        .inline{
+            display: flex;
+        }
+        .text-center {
+            text-align: center;
+        }
+
+        input, textarea, select {
+            display:block;
+            width:50%;
+            margin: 0.2em auto 0.5rem auto;
+        }
+        input[type='radio'], input[type='checkbox'] {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <!-- article -->
+        <article>
+            <!-- h1 -->
+    
+            <header><img src="images/logo-jb.png" alt=""></header>
+            
+            <!-- section 1 -->
+            <main>
+                
+    
+                <nav class="bg_noir w-100 ">
+                    <nav>
+                    <a href="#" title="Home" class="link-blanc">Home</a>
+                    <a href="#" title="News" class="link-blanc">News</a>
+                    <a href="#" title="Contact" class="link-blanc">Contact</a>
+                    <a href="#" title="About" class="link-blanc">About</a>
+                    </nav>
+                </nav>
+    
+                <div class="w-100 bg_vert pb-3" style=" padding-bottom:30px">
+                    
+                    <div class="bg_gris ml-1 mr-1 p-1 text-center">
+                        <form action="d" method="post">
+                            <input type="hidden" name="secret" id="secret" value="données cachées">
+                            
+                            <label for="name">Nom</label>
+                            <input type="text" name="name" id="name">
+                    
+                            <label for="email">Email</label>
+                            <input type="email" name="email"  id="email">
+                            
+                            <label for="data">Date</label>
+                            <input type="date" name="date" id="data">
+                            
+                            <label for="tel">Téléphone</label>
+                            <input type="tel" name="tel" id="tel">
+                            
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password">
+                            
+                            <label for="select">Liste déroulante</label>
+                            <select name="select" id="select">
+                                <option value="0" selected>Sélectionnez</option>
+                                <option value="Menu 1">Menu 1</option>
+                                <option value="Menu 2">Menu 2</option>
+                                <option value="Menu 3">Menu 3</option>
+                            </select>
+                    
+                            
+                            <button type="reset">Effacer</button>
+                            <button type="submit">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+    
+            </main>
+            
+    
+    
+    
+    </article></body>
+</body>
+</html>
